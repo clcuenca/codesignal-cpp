@@ -22,6 +22,29 @@ int CodeSignal::LoopTunnel::leastFactorial(int n) {
 
 }
 
+/**
+ * Returns the amount of ways to sum the integer n
+ *
+ * Problem #26
+ *
+ * @author Carlos L. Cuenca
+ * @date 05/19/2020
+ */
+
+int CodeSignal::LoopTunnel::countSumOfTwoRepresentations2(int n, int l, int r) {
+
+    int count = 0;
+
+    for(int index = l; index <= r; index++) {
+
+        if(index <= (n - index) && (n - index) <= r) count++;
+
+    }
+    
+    return count;
+
+}
+
 int main() {
 
 
