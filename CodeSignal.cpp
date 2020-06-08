@@ -45,6 +45,16 @@ int CodeSignal::LoopTunnel::countSumOfTwoRepresentations2(int n, int l, int r) {
 
 }
 
+int CodeSignal::LoopTunnel::magicalWell(int a, int b, int n) {
+
+    int salary = 0;
+
+    while(n-- > 0) salary += a++ * b++;
+
+    return salary;
+
+}
+
 int main() {
 
 
