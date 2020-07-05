@@ -45,6 +45,16 @@ int CodeSignal::LoopTunnel::countSumOfTwoRepresentations2(int n, int l, int r) {
 
 }
 
+/**
+ * Calculates the amount of money given by the magical well
+ * when casting a marble
+ *
+ * Problem #27
+ *
+ * @author Carlos L. Cuenca
+ * @date 07/05/2020
+ */
+
 int CodeSignal::LoopTunnel::magicalWell(int a, int b, int n) {
 
     int salary = 0;
