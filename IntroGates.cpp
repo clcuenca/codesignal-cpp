@@ -1,4 +1,5 @@
 #include "CodeSignal.hpp"
+#include <cmath>
 
 /**
  * Returns the sum of the given number's digits
@@ -30,7 +31,7 @@ int CodeSignal::IntroGates::addTwoDigits(int n) {
 
 int CodeSignal::IntroGates::largestNumber(int n) {
 
-    return (int) pow(10, n) - 1
+    return (int) std::pow(10, n) - 1;
 
 }
 
@@ -52,5 +53,67 @@ int CodeSignal::IntroGates::largestNumber(int n) {
 int CodeSignal::IntroGates::candies(int n, int m) {
 
     return n * (m / n);
+
+}
+
+/**
+ * Returns the amount of people behind you, and to the left given the current
+ * rows and columns in the theater and your current row and column within the 
+ * theater
+ *
+ * Problem #4
+ * 
+ * @author Carlos L. Cuenca
+ * @date 07/08/2020
+ * @param {Number} nCols The amount of columns in the theater
+ * @param {Number} nRows The amount of rows in the theater
+ * @param {Number} col The current column you're residing in
+ * @param {Number} row The current row you're residing in
+ */
+
+int CodeSignal::IntroGates::seatsInTheater(int nCols, int nRows, int col, int row) {
+
+	return (nCols - col + 1) * (nRows - row);
+
+}
+
+/**
+ * Returns a largest integer n such that n is divisible by divisor
+ * and less than or equal to the bound. The function will subtract the remainder
+ * of bound divided by the divisor from the bound to reach the largest n
+ *
+ * Problem #5
+ *
+ * @author Carlos L. Cuenca
+ * @date 07/08/2020
+ * @param {Number} divisor The multiple of n
+ * @param {Number} bound The highest n  can reach
+ */
+
+int CodeSignal::IntroGates::maxMultiple(int divisor, int bound) {
+
+	return bound - (bound % divisor);
+
+}
+
+/**
+ * Given the amount of numbers in a circle, n, and the firstNumber
+ * this function will return the radially opposite number from firstNumber
+ * within the given range of numbers.
+ * Since there are some radially opposite numbers that are less than 
+ * the given firstNumber this function takes into account wrap-around
+ *
+ * Problem #6
+ *
+ * @author Carlos L. Cuenca
+ * @date 7/08/2020
+ * @param {Number} n The amount of numbers in the circle
+ * @param {Number} firstNumber The number that is the point of reference
+ * @return {Number} The radially opposite number from firstNumber
+ */
+
+int CodeSignal::IntroGates::circleOfNumbers(int n, int firstNumber) {
+
+	return (firstNumber + n / 2) % n;
 
 }
