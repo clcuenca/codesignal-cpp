@@ -3,21 +3,6 @@
 #include <iostream>
 
 /**
- * Returns the sum of the given number's digits
- *
- * Problem #1
- *
- * @author: Carlos L. Cuenca
- * @date 05/19/2020
- */
-
-int CodeSignal::IntroGates::addTwoDigits(int n) {
-
-    return (n % 10) + (n / 10);
-
-}
-
-/**
  * Finds the smallest factorial result relative to the given integer n
  *
  * Problem #25
