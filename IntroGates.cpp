@@ -44,9 +44,9 @@ int CodeSignal::IntroGates::largestNumber(int n) {
  *
  * @author Carlos L. Cuenca
  * @date 07/08/2020
- * @param {Number} n The total amount of children
- * @param {Number} m The total amount of candy pieces
- * @param {Number} The total amount of candy that will be eaten between 
+ * @param int n The total amount of children
+ * @param int m The total amount of candy pieces
+ * @param int The total amount of candy that will be eaten between 
  * the children
  */
 
@@ -65,10 +65,10 @@ int CodeSignal::IntroGates::candies(int n, int m) {
  * 
  * @author Carlos L. Cuenca
  * @date 07/08/2020
- * @param {Number} nCols The amount of columns in the theater
- * @param {Number} nRows The amount of rows in the theater
- * @param {Number} col The current column you're residing in
- * @param {Number} row The current row you're residing in
+ * @param int nCols The amount of columns in the theater
+ * @param int nRows The amount of rows in the theater
+ * @param int col The current column you're residing in
+ * @param int row The current row you're residing in
  */
 
 int CodeSignal::IntroGates::seatsInTheater(int nCols, int nRows, int col, int row) {
@@ -86,8 +86,8 @@ int CodeSignal::IntroGates::seatsInTheater(int nCols, int nRows, int col, int ro
  *
  * @author Carlos L. Cuenca
  * @date 07/08/2020
- * @param {Number} divisor The multiple of n
- * @param {Number} bound The highest n  can reach
+ * @param int divisor The multiple of n
+ * @param int bound The highest n  can reach
  */
 
 int CodeSignal::IntroGates::maxMultiple(int divisor, int bound) {
@@ -107,13 +107,62 @@ int CodeSignal::IntroGates::maxMultiple(int divisor, int bound) {
  *
  * @author Carlos L. Cuenca
  * @date 7/08/2020
- * @param {Number} n The amount of numbers in the circle
- * @param {Number} firstNumber The number that is the point of reference
- * @return {Number} The radially opposite number from firstNumber
+ * @param int n The amount of numbers in the circle
+ * @param int firstNumber The number that is the point of reference
+ * @return int The radially opposite number from firstNumber
  */
 
 int CodeSignal::IntroGates::circleOfNumbers(int n, int firstNumber) {
 
 	return (firstNumber + n / 2) % n;
+
+}
+
+/**
+ * Given n minutes, returns the sum of the digits displayed as the time after
+ * 00:00
+ * 
+ * Problem #7
+ *
+ * @author: Carlos L. Cuenca
+ * @since: 07/08/2020
+ * @param int n The amount of minutes elapsed after 00:00
+ * @return int the sum of the digits of n minutes ater 00:00
+ */
+
+int CodeSignal::IntroGates::lateRide(int n) {
+
+	return (n/60/10) + (n/60%10) + (n%60/10) + (n%60%10);
+
+}
+
+/**
+ * Given the minute rates min1, min2_10, & min11. This function will return 
+ * the amount of minutes available from the given cents and the applicable 
+ * rates.
+ *
+ * Problem #8
+ *
+ * @author: Carlos L. Cuenca
+ * @since: 07/08/2020
+ * @param int min1 The cost of the first minute
+ * @param int min2_10 The cost of the second to 10th minute
+ * @param int min11 The cost of the 11th and above minute
+ * @param int s The amount of available cents
+ * @return int The amount of minutes given cents, s
+ */
+
+int CodeSignal::IntroGates::phoneCall(int min1, int min2_10, int min11, int s) {
+
+	// If we don't have enough money
+	if(!s || (s - min1) < 0) return 0;
+
+	// We check if we fall into the 2 - 10 range
+	if(s - min1 - 9*min2_10 < 0) 
+		return (s - min1) / min2_10 + 1;
+
+	// Finally, we hold the 10 minutes that we know we have constant
+	// and divide the difference by the 11+ minute rate
+	return (s - min1 - 9*min2_10)/min11 + 10;
 
 }

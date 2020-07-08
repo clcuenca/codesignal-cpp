@@ -15,7 +15,8 @@ namespace CodeSignal {
 		int seatsInTheater(int, int, int, int);
 		int maxMultiple(int, int);
 		int circleOfNumbers(int, int);
-
+		int lateRide(int);
+		int phoneCall(int, int, int, int);
 	}
 
 	#endif
