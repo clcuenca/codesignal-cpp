@@ -21,6 +21,17 @@ namespace CodeSignal {
 
 	#endif
 
+	#ifndef CODESIGNAL_AT_THE_CROSSROADS_HPP
+	#define CODESIGNAL_AT_THE_CROSSROADS_HPP
+
+	namespace AtTheCrossRoads {
+
+		bool reachNextLevel(int, int, int);
+
+	}
+
+	#endif
+
 	#ifndef CODESIGNAL_LOOP_TUNNEL_HPP
 	#define CODESIGNAL_LOOP_TUNNEL_HPP
 
