@@ -24,9 +24,10 @@ namespace CodeSignal {
 	#ifndef CODESIGNAL_AT_THE_CROSSROADS_HPP
 	#define CODESIGNAL_AT_THE_CROSSROADS_HPP
 
-	namespace AtTheCrossRoads {
+	namespace AtTheCrossroads {
 
 		bool reachNextLevel(int, int, int);
+		int knapsackLight(int, int, int, int, int);
 
 	}
 
