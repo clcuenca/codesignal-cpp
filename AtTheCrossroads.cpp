@@ -54,3 +54,42 @@ int CodeSignal::AtTheCrossroads::knapsackLight(int value1, int weight1, int valu
     return value2;
 
 }
+
+/**
+ * Given three numbers where two are the same number, this method will return
+ * the extra unique number via xor result of all numbers.
+ * 
+ * Problem #11
+ *
+ * @author Carlos L. Cuenca
+ * @since: 07/13/2020
+ * @param a int The first value
+ * @param b int The second value
+ * @param c int The third value
+ * @return The unique value out of all three numbers.
+ */
+
+int CodeSignal::AtTheCrossroads::extraNumber(int a, int b, int c) {
+
+	return a ^ b ^ c;
+
+}
+
+/**
+ * Given two numbers a & b, this method determines if the loop will
+ * run indefinitely 
+ * 
+ * Problem #12
+ *
+ * @author Carlos L. Cuenca
+ * @since: 07/13/2020
+ * @param a int The first value
+ * @param b int The second value
+ * @return bool indicating if the loop will run indefinitely
+ */
+
+bool CodeSignal::AtTheCrossroads::isInfiniteProcess(int a, int b) {
+
+	return (a > b) || ((a-b) % 2);
+
+}
