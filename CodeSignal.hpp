@@ -28,6 +28,8 @@ namespace CodeSignal {
 
 		bool reachNextLevel(int, int, int);
 		int knapsackLight(int, int, int, int, int);
+		int extraNumber(int, int, int);
+		bool isInfiniteProcess(int, int);
 
 	}
 
