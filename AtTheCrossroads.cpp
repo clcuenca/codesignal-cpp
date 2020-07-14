@@ -93,3 +93,75 @@ bool CodeSignal::AtTheCrossroads::isInfiniteProcess(int a, int b) {
 	return (a > b) || ((a-b) % 2);
 
 }
+
+/**
+ * Given numbers a, b, & c and an arithmetic expression in the form a#b = c
+ * this function checks if it's possible to replace # with one of the four signs
+ * +, -, *, or / to obtain a correct expression
+ *
+ * Problem #13
+ * 
+ * @author Carlos L. Cuenca
+ * @since: 07/13/2020
+ * @param a int The value of a
+ * @param b int The value of b
+ * @param c int the Value of c 
+ * @return bool indicating a proper 
+ */
+
+bool CodeSignal::AtTheCrossroads::arithmeticExpression(int a, int b, int c) {
+
+	return ((a + b) == c) || ((a - b) == c) || ((a * b) == c) || (((a / b) == c) && !(a%b));
+
+}
+
+/**
+ * Given two scores, this function returns a boolean value denoting if a 
+ * game could be finished.
+ *
+ * Problem #14
+ *
+ * @author Carlos L. Cuenca
+ * @since: 07/13/2020
+ * @param score1 int The first score
+ * @param score2 int The second score
+ * @return bool indicating a finishable game.
+ */
+bool CodeSignal::AtTheCrossroads::tennisSet(int score1, int score2) {
+
+    if((score1 + score2) >= 6){
+        
+        if((score1 == 6) && (score2 < 5)) return true;
+        if((score2 == 6) && (score1 < 5)) return true;
+        
+    }
+    
+    if((score1 + score2) >= 12){
+            
+        if((score1 == 7) && ((score2 == 5) || (score2 == 6))) return true;
+        if((score2 == 7) && ((score1 == 5) || (score1 == 6))) return true;
+        
+    }
+    
+    return false;
+
+}
+
+/**
+ * Returns a resulting boolean value that shatters someones beliefs
+ *
+ * Problem #15
+ *
+ * @author Carlos L. Cuenca
+ * @date 07/13/2020
+ * @param young bool Denoting age
+ * @param beautiful bool Denoting beauty
+ * @param loved bool Denoting love
+ * @return bool Shattering expectations
+ */
+bool CodeSignal::AtTheCrossroads::willYou(bool young, bool beautiful, bool loved) {
+
+    return (young && beautiful && !loved) ^ (loved && !(young && beautiful));
+
+}
+

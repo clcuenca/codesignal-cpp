@@ -30,6 +30,9 @@ namespace CodeSignal {
 		int knapsackLight(int, int, int, int, int);
 		int extraNumber(int, int, int);
 		bool isInfiniteProcess(int, int);
+		bool arithmeticExpression(int, int, int);
+		bool tennisSet(int, int);
+		bool willYou(bool, bool, bool);
 
 	}
 
