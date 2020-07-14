@@ -1,5 +1,6 @@
 #include "CodeSignal.hpp"
 
+
 /**
  * Given experience, threshold,  & reward; this function will return
  * a boolean denoting if the player is to reach the next level.
@@ -164,4 +165,38 @@ bool CodeSignal::AtTheCrossroads::willYou(bool young, bool beautiful, bool loved
     return (young && beautiful && !loved) ^ (loved && !(young && beautiful));
 
 }
+
+/**
+ * Given the last number of days in a month, this method returns a collection
+ * of the next possible number of days the card can be extended
+ *
+ * Problem #16
+ *
+ * @param lastNumberOfDays int The last count of number of days
+ * @return std::vector<int> A collection of the possible number or days that
+ * can be reloaded onto the card
+ */
+std::vector<int> CodeSignal::AtTheCrossroads::metroCard(int lastNumberOfDays) {
+
+    std::vector<int> returnVector;
+    
+    int MONTH_30 = 30;
+    int MONTH_31 = 31;
+    int MONTH_28 = 28;
+    
+    // January, March, May, July, August, October, December
+    if(lastNumberOfDays == MONTH_31){
+        
+        returnVector.push_back(MONTH_28);
+        returnVector.push_back(MONTH_30);
+        
+    }
+    
+    // Feburary, April, June, September, November
+    returnVector.push_back(MONTH_31);
+    
+    return returnVector;
+
+}
+
 

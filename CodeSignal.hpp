@@ -1,6 +1,7 @@
-
 #ifndef CODESIGNAL_HPP
 #define CODESIGNAL_HPP
+
+#include <vector>
 
 namespace CodeSignal {
 
@@ -33,6 +34,7 @@ namespace CodeSignal {
 		bool arithmeticExpression(int, int, int);
 		bool tennisSet(int, int);
 		bool willYou(bool, bool, bool);
+		std::vector<int> metroCard(int);
 
 	}
 
