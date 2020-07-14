@@ -36,23 +36,30 @@ bool CodeSignal::AtTheCrossroads::reachNextLevel(int experience, int threshold, 
  */
 
 int CodeSignal::AtTheCrossroads::knapsackLight(int value1, int weight1, int value2, int weight2, int maxW) {
+  
+    // We can carry both of them
+    if((weight1 + weight2) <= maxW) {
 
-    // Take both if you can carry them
-    if((weight1 + weight2) <= maxW) return value1 + value2;
-    
+        return value1 + value2;
+
+    }
+
     // If either exceeds the max, you can't carry either them
-    if((weight1 > maxW) && (weight2 > maxW)) return 0;
-    
-    // We're here because the condition is exclusive
-    // First we make a deduction based on weight
-    if((weight1 > maxW) && (weight2 <= maxW)) return value2;
-    if((weight2 > maxW) && (weight1 <= maxW)) return value1;
-    
-    // Last we make a deduction based on value
-    if(value1 >= value2) return value1;
-    
-    return value2;
+    if((weight1 > maxW) && (weight2 > maxW)) {
 
+        return 0;
+
+    }
+
+    // Last we make a deduction based on value
+    if(value1 >= value2 || weight2 > maxW) {
+
+        return value1;
+
+    }
+
+    return value2;
+    
 }
 
 /**
