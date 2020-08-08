@@ -5,4 +5,4 @@ arabica_test: CodeSignal.hpp
 	$(COMPILER) $(CPPFLAGS) -o CodeSignal CodeSignal.cpp IntroGates.cpp AtTheCrossroads.cpp
 
 clean:
-	rm arabica_test
+	rm CodeSignal
