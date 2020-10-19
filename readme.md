@@ -6,11 +6,13 @@ Each solution is ran on the command line.
 
 ## Compilation
 
-Unless otherwise specified, each program is compiled with g++ with the following flags:
+Unless otherwise specified, each program is compiled using g++ with the following flags:
 
 ```~$ g++ -Wall -g -pedantic -pedantic-errors -std=c++11 -o <problemname> <problemname>.cpp```
 
-and all programs have been compiled without the compiler complaining, and ran with the corresponding input file.
+If make is installed on your system, type in ```~$ make``` in the problem's corresponding directory.
+All programs have been compiled without compiler complaint and ran with the corresponding input file.
+
 To run a program with the input file:
 ```~$ ./<program> < input.txt```
 
