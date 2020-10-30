@@ -1,4 +1,4 @@
-/// CodeSignal - Intro - Smooth Sailing
+/// CodeSignal - Intro - Island of Knowledge
 /// Array Maximal Adjacent Difference
 /// Author: Carlos L. Cuenca
 /// Date: 10/30/2020

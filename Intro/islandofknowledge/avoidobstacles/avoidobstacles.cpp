@@ -1,4 +1,4 @@
-/// CodeSignal - Intro - Smooth Sailing
+/// CodeSignal - Intro - Island of Knowledge
 /// Avoid Obstacles
 /// Author: Carlos L. Cuenca
 /// Date: 10/20/2020

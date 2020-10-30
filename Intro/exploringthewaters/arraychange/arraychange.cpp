@@ -1,4 +1,4 @@
-/// CodeSignal - Intro - Smooth Sailing
+/// CodeSignal - Intro - Exploring the Waters
 /// Array Change
 /// Author: Carlos L. Cuenca
 /// Date: 10/30/2020
