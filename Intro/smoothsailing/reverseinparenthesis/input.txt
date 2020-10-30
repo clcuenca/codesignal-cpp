@@ -1,0 +1,7 @@
+6
+(bar)
+foo(bar)baz
+foo(bar)baz(blim)
+foo(bar(baz))blim
+()
+(abc)d(efg)

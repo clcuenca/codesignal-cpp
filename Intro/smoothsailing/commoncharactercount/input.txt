@@ -1,0 +1,11 @@
+5
+aabcc
+adcaa
+zzzz
+zzzzzzz
+abca
+xyzbac
+a
+b
+a
+aaa
