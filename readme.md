@@ -1,21 +1,31 @@
 # Codesignal - C++
 
-This repository contains solutions to Codesignal's various problems.
-Each solution contains a driver program and an input file with inputs taken from the default unlocked test cases.
-Each solution is ran on the command line.
+## Description
 
-## Compilation
+Collection of various Codesignal problems written in c++.
 
-Unless otherwise specified, each program is compiled using g++ with the following flags:
+## Categories in Progress
+
+* **Intro**
+* **The Core**
+* **Graphs**
+
+## Structure
+
+This repository aims to keep each category & sub categories in their own directory to reflect the structure of Codesignal's problem sets; e.g. Intro -> The Journey Begins -> *problem*. Each problem will compile & able to be ran on the command line as well as, include a makefile & input.txt file to display the results. Each program is designed to consume the included input file.
+
+## Program Execution
+
+The following command is used to execute each of the programs:
+
+```cpp
+./<program name> < input.txt
+```
+
+## Program Compilation
+
+Each program has been compiled with the following command (included in the corresponding makefile):
 
 ```~$ g++ -Wall -g -pedantic -pedantic-errors -std=c++11 -o <problemname> <problemname>.cpp```
 
-If make is installed on your system, type in ```~$ make``` in the problem's corresponding directory.
-All programs have been compiled without compiler complaint and ran with the corresponding input file.
-
-To run a program with the input file:
-```~$ ./<program> < input.txt```
-
-## Tracks In Progress
-
-* **Intro**
+At the time of writing, the compilation & execution of each of the programs has been done with Cygwin.
