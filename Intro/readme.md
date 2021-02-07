@@ -38,4 +38,4 @@
 * arrayMaximalAdjacentDifference
 * avoidObstacles
 * Box Blur
-* MineSweeper 
+* Minesweeper 
